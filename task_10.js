@@ -20,7 +20,7 @@ function  mrevers (arr) {
 }
 
     function callback() {
-
+return
     }
 
 const arr = [3,2,1,0];
