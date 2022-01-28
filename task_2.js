@@ -3,29 +3,27 @@
 //     - Первый параметр обязателен и может принимать только массив
 // - Второй параметр обязателен и может принимать только функцию
 
-const arr = [1,2,3];
-//filter(arr, function(item, i, arr) {});
-
-const nfilt = (collection, callback) => {
-    const result = [];
-    for (const item of collection) {
-        // Предикат используется только для проверки
-        // Внутрь callback по очереди передается каждый элемент коллекции collection
-        if (callback(item)) {
-            // В результат всегда добавляется элемент исходной коллекции
-            result.push(item);
+function  mfilter (arr, callback) {
+    //Ваша реализация метода
+    var result = [];
+    if (!Array.isArray(arr)) throw new Error('Первый параметр обязателен и может принимать только массив');
+    if (typeof callback !== 'function') throw new Error('Второй параметр обязателен и может принимать только функцию');
+    let i, length = arr.length;
+    for (i = 0; i < length; i = i + 1) {
+        if (callback(arr[i])) {
+            result.push(arr[i])
         }
+        callback(result)
     }
-
     return result;
-    console.log(result)
 }
 
-if (typeof b !== "function") throw new Error("...")
+function callback(a) {
+    return a > 0;
+}
 
-    [1, 3, 5, 2, 4].filter((v, i, arr) {
-    console.log(v);
-    console.log(i);
-    console.log(arr);
-    return v > 2;
-})
+
+const arr = [1,2,-7,3,-2,4];
+
+let rez = mfilter (arr, callback) //вызов функции
+console.log (rez);
