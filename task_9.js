@@ -17,5 +17,4 @@ function arrayFill(value, count_value) {
     }
     return gen_out;
 }
-
-console.log(arrayFill( 'e' , 5));
+console.log(arrayFill( 1 , 5));
