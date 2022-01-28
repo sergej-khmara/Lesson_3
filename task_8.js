@@ -1,7 +1,4 @@
 
-
-
-
 function f(array) {
     if (!Array.isArray(array)) {
         console.log("Первый параметр обязателен и может принимать только массив");
