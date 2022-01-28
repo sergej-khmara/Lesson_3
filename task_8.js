@@ -32,5 +32,5 @@ function f(array) {
     }
     return sum;
 }
-//let a = [[[1, 2], [1, 2]], [['2', 1], [1, 2]]];
+
 console.log(f(a));
