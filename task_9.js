@@ -10,20 +10,14 @@
 
 function arrayFill(value, count_value) {
 
-    if (!Array.isArray(value) && typeof value !== 'number' && typeof value !== 'string' && typeof value !== 'object') {
-        console.log('Первый параметр обязателен и может принимать только число, строку, объект, массив');
-        return;
-    }
-    if (typeof count_value !== 'number') {
-        console.log('Второй параметр обязателен и может принимать только число');
-        return;
-    }
-
-    let out = [];
+    if (!Array.isArray(value) && typeof value !== 'number' && typeof value !== 'string' && typeof value !== 'object')
+        throw new Error('Первый параметр обязателен и может принимать только число, строку, объект, массив\'');
+    if (typeof count_value !== 'number') throw new Error('Второй параметр обязателен и может принимать только число');
+    let gen_out = [];
     for (i = 0; i < count_value; i++) {
-        out[i] = value;
+        gen_out[i] = value;
     }
-    return out;
+    return gen_out;
 }
 
-console.log(arrayFill(true , 5));
+console.log(arrayFill( 'e' , 500));
