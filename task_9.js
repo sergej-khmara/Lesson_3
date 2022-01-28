@@ -5,11 +5,9 @@
 //     - Первый параметр обязателен и может принимать только число, строку, объект, массив
 // - Второй параметр обязателен и может принимать только число
 
-
 //arrayFill('x',5); // [x,x,x,x,x]
 
 function arrayFill(value, count_value) {
-
     if (!Array.isArray(value) && typeof value !== 'number' && typeof value !== 'string' && typeof value !== 'object')
         throw new Error('Первый параметр обязателен и может принимать только число, строку, объект, массив\'');
     if (typeof count_value !== 'number') throw new Error('Второй параметр обязателен и может принимать только число');
@@ -20,4 +18,4 @@ function arrayFill(value, count_value) {
     return gen_out;
 }
 
-console.log(arrayFill( 'e' , 500));
+console.log(arrayFill( 'e' , 5));
