@@ -8,16 +8,15 @@
 // const acc = 0;
 // reduceRight(arr, function(acc, item, i, arr) {}, acc);
 
-function mreduce(arr, item , acc) {
+function mreduceR(arr, item , acc) {
 
     if (!Array.isArray(arr)) throw new Error('Параметр arr не является массивом');
     if (typeof item !== 'function') throw new Error('Параметр callback не является функцией');
     if (typeof acc != 'string' && typeof acc != 'number') throw new Error('Параметр может принимать только строку или число');
     let result = 0;
-    for (let i = 0; i > 0; i+1) {
+    for (i = 0; i < arr.length; i++) {
 
-        result[i] = arr [(arr.length - 1) - i]
-        //result = callback(result, arr[i]);
+        result = callback(result, arr[(arr.length - 1) -i]);
     }
     return result;
 }
@@ -28,10 +27,10 @@ function callback(prev, element) {
     return prev;
 }
 
-const arr = [1,2,3,4,2];
+const arr = [1,2,3,4];
 const acc = 0;
 
-var m =mreduce(arr,  callback, acc);
+var m =mreduceR(arr,  callback, acc);
 console.log(m);
 
 
