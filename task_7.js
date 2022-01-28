@@ -11,7 +11,7 @@ var arr = ['abcd', 'abcde', 'ab', 'abc'];
 // Перепишите выделенный участок:
 // используйте вместо цикла `for` метод `map`
 
-var lengths = arr.map(function(word) {
-    return  word.length;
+var lengths = arr.map(function(dlin) {
+    return  dlin.length;
 });
 console.log(lengths);
